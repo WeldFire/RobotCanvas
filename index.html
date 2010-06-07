@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<script type="text/javascript" src="main.js" ></script>
+	</head>
+	<body>
+		
+		<canvas id="screen" width="640" height="480" > 
+    	</canvas> 
+		<button id="loadResource" >Load Resource</button>
+                <button id="drawResource" >Draw Resource</button>
+                <script type="text/javascript" >
+
+			document.getElementById("loadResource").onclick = function() {
+				game.resources.loadImage({
+                                        name:"unicorn",
+                                        url:"unicorn.jpg",
+										loaded:function() {
+											alert('UNICORRRRRRN!!!!!!!');
+										}
+                                        }); 
+			};                        
+
+			document.getElementById("drawResource").onclick = function() {
+				alert("display");
+			};                                                
+                        
+                </script>
+	</body>
+</html>

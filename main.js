@@ -9,8 +9,27 @@ var game = {
 		
 		//draws a resource to the screen
 		draw:function(params) {
-			
-			//TODO... 
+			//get the image to draw
+            var resource = game.resources.images[params.name];
+                        
+			//draw the elements on the screen
+			if (params.height && params.width) {
+					game.screen.context.drawImage(
+							resource,
+							params.x,
+							params.y,
+							params.width,
+							params.height
+							);
+			}
+			//just use the defaults for the size
+			else {
+					game.screen.context.drawImage(
+							resource,
+							params.x,
+							params.y
+							);
+			}
 			
 		},
 		
@@ -47,3 +66,6 @@ var game = {
 	}
 	
 };
+
+
+game.init();
